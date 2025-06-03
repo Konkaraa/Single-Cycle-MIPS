@@ -1,0 +1,7 @@
+For the implementation of the Instruction Fetch (IF) stage, a 32-bit input signal (PC_Immed) was used, which was logically shifted left (SLL) by "10" (i.e., by 2 bits), and also served as an input to an adder. Additionally, a 2-to-1 multiplexer was used with a 1-bit input condition signal (PC_sel), receiving as inputs: the 32-bit signal from the adder and the 32-bit signal representing the PC incremented by "0100" (i.e., by 4).
+
+Subsequently, a submodule (PC) was created, which took as inputs: the 32-bit output of the multiplexer, a 1-bit signal (PC_LdEn) that enabled writing to the PC, a 1-bit Reset signal that cleared the PC output for one cycle when activated, and a Clock signal.
+
+In summary, the Instruction Fetch (IF) stage, depending on the 1-bit input signal (PC_sel), produced a 32-bit output (PC_Out), which was either incremented by "0100" (4) or incremented by the left-shifted (by 2 bits) PC_Immed input plus "0100" (4), based on the previous output.
+
+To implement the Instruction Fetch (IF) stage in the Xilinx environment, the port mapping technique was used to properly connect the generated circuits. The following standard libraries were also used: use IEEE.STD_LOGIC_1164.ALL, use ieee.numeric_std.all, and use ieee.std_logic_unsigned.all.
