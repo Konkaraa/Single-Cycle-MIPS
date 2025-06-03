@@ -1,10 +1,10 @@
 To complete the processor, the final stage (Top Module) integrates three main subsystems:
 
-the Datapath stage,
+Datapath stage,
 
-the Control stage,
+Control stage,
 
-and the shared memory (RAM).
+Shared memory (RAM).
 
 
 The RAM used in the Datapath consists of:
