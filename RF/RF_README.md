@@ -1,0 +1,5 @@
+For the Register File, 32 registers of 32-bit input/output were used. The design included a clock signal (Clock), a reset switch (Reset) that cleared the contents of the registers, and a 1-bit write enable signal (WE) to allow writing into the registers. Additionally, a decoder was used to convert a 5-bit input signal into a 32-bit output, depending on the 5-bit input (Awr) it received. Two 32-to-1 multiplexers were also used to select the output of the registers, based on two 5-bit address inputs (Adr1 and Adr2), producing the desired outputs of the Register File. Finally, by combining the write enable signal (WrEn) and the decoder output through an AND gate, and using a 32-bit data input signal (Din) which was stored in a specific register, the final output was generated.
+
+The Register File was implemented in the Xilinx environment using the for generate technique to create the 32 registers, and the port mapping method was used to correctly connect the generated components. The following libraries were used: use IEEE.STD_LOGIC_1164.ALL, library work, and use work.regarray_type.all.
+
+Note: Register R0 was defined to always hold the zero value.
