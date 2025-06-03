@@ -1,0 +1,7 @@
+For the implementation of the Instruction Execution (EX) stage, three 32-bit input signals were used (RF_A, RF_B, Immed). Two of these signals (RF_B and Immed) served as inputs to a 2-to-1 multiplexer (Multiplexer), controlled by a 1-bit input signal (ALU_Bin_sel). The output of the multiplexer was a temporary 32-bit signal (Mux_out).
+
+This stage utilized the Arithmetic Logic Unit (ALU) developed in Phase 1. Therefore, the ALU received two 32-bit input signals (RF_A and Mux_out), as well as a 4-bit control input (ALU_func), which functioned as the operation selector (similar to the Op signal in the ALU). The ALU produced a 32-bit output (ALU_out) and a 1-bit output (ALU_zero), which acted as a zero flag, indicating when the result of the arithmetic or logic operation was zero.
+
+In general, the Execution (EX) stage takes certain input and control signals and produces a final result based on arithmetic or logic operations.
+
+To implement the Instruction Execution (EX) stage in the Xilinx environment, the if...else and when...others constructs were used for the logic in the multiplexers. The port mapping method was employed for correctly connecting the generated circuits. The following libraries were used:use IEEE.STD_LOGIC_1164.ALL; use ieee.numeric_std.all; use ieee.std_logic_unsigned.all;
