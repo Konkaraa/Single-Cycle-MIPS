@@ -6,7 +6,7 @@ the Control stage,
 
 and the shared memory (RAM).
 
-RAM Structure:
+
 The RAM used in the Datapath consists of:
 
 A Clock signal,
