@@ -1,2 +1,1 @@
-ALU is ..
-
+For the ALU, two 32-bit input signals (A, B) were used, which are in 2's complement form, along with a 4-bit input signal (Op), which acts as the operation code for the circuit. For example, when the input signal (Op) is "0000", the circuit performs addition. To implement the ALU in the Xilinx environment, the if-else technique was used, and for the operations, the following standard libraries were utilized: use IEEE.STD_LOGIC_1164.ALL, use ieee.numeric_std.all, and use ieee.std_logic_unsigned.all.
